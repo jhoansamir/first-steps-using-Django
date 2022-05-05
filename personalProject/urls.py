@@ -16,10 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.urls import path, include
-
+º
 from petclub.views import HelloWorld
+from petclub.views import PetAPIView
+from petclub.views import PetListAPIView
 
 urlpatterns = [
     path('hi', HelloWorld.as_view(), name="helloworld"),
     path('api-auth/', include('rest_framework.urls')),
+    path('pet-l', PetListAPIView.as_view(), name="pet-list"),
+    path('pet-r', PetAPIView.as_view(), name="pet"),
 ]
