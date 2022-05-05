@@ -1,5 +1,5 @@
 from django.db import models
-
+#hola 
 class Person(models.Model):
     id = models.AutoField(primary_key=True)
     email = models.EmailField(max_length=255)
