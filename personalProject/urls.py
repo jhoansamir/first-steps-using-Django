@@ -20,10 +20,14 @@ from django.urls import path, include
 from petclub.views import HelloWorld
 from petclub.views import PetAPIView
 from petclub.views import PetListAPIView
+from petclub.views import PersonView
+from petclub.views import PetView
 
 urlpatterns = [
     path('hi', HelloWorld.as_view(), name="helloworld"),
     path('api-auth/', include('rest_framework.urls')),
     path('pet-l', PetListAPIView.as_view(), name="pet-list"),
     path('pet-r', PetAPIView.as_view(), name="pet"),
+    path('persons', PersonView.as_view(), name="person"),
+    path('pets', PetView.as_view(), name='pet'),
 ]
