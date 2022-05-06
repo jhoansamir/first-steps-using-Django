@@ -32,7 +32,7 @@ class PersonView(APIView):
     def get(self, request):
         return Response(data="Hola gente, estoy en el get", status=200)
     def patch(self, request):
-        return Response(data="Hola gente, estoy en el path", status=200)    
+        return Response(data="Hola gente, estoy en el patch", status=200)    
     def post(self, request):
         return Response(data="Hola gente, estoy en el post", status=200)
     def delete(self, request):
@@ -42,7 +42,7 @@ class PetView(APIView):
     def get(self, request):
         return Response(data="Hola gente, estoy en el get", status=200)
     def patch(self, request):
-        return Response(data="Hola gente, estoy en el path", status=200)
+        return Response(data="Hola gente, estoy en el patch", status=200)
     def post(self, request):
         return Response(data="Hola gente, estoy en el post", status=200)
     def delete(self, request):
